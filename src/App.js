@@ -98,7 +98,7 @@ function App() {
           { matches &&
             <div className='right-cont'>
               <div className='right-panel'>
-                <Link to="/profile">Go to profile</Link>
+                <Link to="/profile">Go to profile page</Link>
 
                 <div className='right'>
                   <ProfilePreview elements={userData} removeLink={removeLink}/>
