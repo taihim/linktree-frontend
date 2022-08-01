@@ -1,0 +1,16 @@
+.link {
+    background-color: black;
+    width: 85%;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 16px;
+    max-width: 600px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
