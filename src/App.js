@@ -92,6 +92,7 @@ function App() {
           <div className='left'>
             <div className='add-section'>
               <input value="Add New Link" type="button" onClick={addLink} className='add-link btn'/>
+              {/* <input value="Remove Link" type="button" onClick={removeLink} className='remove-link btn'/> */}
               <input value="Add Store" type="button" onClick={addStore} className='add-store btn'/>
             </div>
             <br/>
