@@ -12,3 +12,26 @@
     font-weight: bold;
     margin-left: 2px;
 }
+
+
+.right-panel-mobile{
+    width: 100%;
+    padding-top: 25px;
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-mobile{
+    border: 16px solid black;
+    border-radius: 35px;
+    overflow: auto;
+    height: 500px;
+    width: 250px;
+    overflow-x: hidden;
+    background-color: gray;
+    margin: auto;
+  }

@@ -7,10 +7,14 @@ body {
   height: 100%;
 }
 
+#root{
+  height: 100%;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   background-color: #d4cfcb;
   overflow: hidden;
 }
@@ -45,6 +49,7 @@ body {
   font-weight: bold;
   padding: 10px;
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .btn:hover{
@@ -54,10 +59,8 @@ body {
   transition: 0.01s;
 }
 
-@media only screen and (max-width: 500px) {
-  
+@media only screen and (max-width: 500px) {  
   .btn {
-    margin-top: 15px;
     margin-right: 0;
   }
 }
@@ -93,27 +96,7 @@ body {
   margin: auto;
 }
 
-.right-panel-mobile{
-  width: 100%;
-  padding-top: 25px;
-  margin: auto;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.right-mobile{
-  border: 16px solid black;
-  border-radius: 35px;
-  overflow: auto;
-  height: 500px;
-  width: 250px;
-  overflow-x: hidden;
-  background-color: gray;
-  margin: auto;
-}
 
 ::-webkit-scrollbar {
   width: 0;

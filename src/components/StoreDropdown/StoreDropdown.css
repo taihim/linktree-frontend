@@ -1,0 +1,30 @@
+.store-dropdown {
+    background-color: black;
+    width: 85%;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 16px;
+    max-width: 600px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-radius 0.2s ease-out
+}
+
+.dropdown-content {
+    height: 0px;
+    transition: height 0.4s ease-out;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin: 0 9px 0 9px;
+}

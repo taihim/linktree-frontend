@@ -40,6 +40,12 @@ function App() {
     })
   }
 
+  function addStore() {
+    setUserData((prevData) => {
+      return [{type: "store", store_url: 'https://google.com', id: nanoid(), order: prevData.length + 1 }, ...prevData]
+    })
+  }
+
   const toggleDrawer =
     (anchor, open) =>
     (event) => {
@@ -48,7 +54,6 @@ function App() {
       }
       setState({ ...state, [anchor]: open });
     };
-
 
   React.useEffect(() => {
     localStorage.setItem("userData", JSON.stringify(userData))
@@ -88,31 +93,35 @@ function App() {
             <div className='add-section'>
               <input value="Add New Link" type="button" onClick={addLink} className='add-link btn'/>
               <input value="Remove Link" type="button" onClick={removeLink} className='remove-link btn'/>
+              <input value="Add Store" type="button" onClick={addStore} className='add-store btn'/>
             </div>
             <br/>
             <div className='config-section'>              
-              <DraggableList data={userData} handleChange={setUserData} />
+              <DraggableList data={userData} handleChange={setUserData} removeNode={removeLink} />
             </div>
           </div>
 
-          { matches &&
-            <div className='right-cont'>
-              <div className='right-panel'>
-                <Link to="/profile">Go to profile page</Link>
+          { matches 
+            ?
+              <div className='right-cont'>
+                <div className='right-panel'>
+                  <Link to="/profile">Go to profile page</Link>
 
-                <div className='right'>
-                  <ProfilePreview elements={userData} removeLink={removeLink}/>
+                  <div className='right'>
+                    <ProfilePreview elements={userData} removeLink={removeLink}/>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </div> 
+            :
+              <PreviewDrawer 
+              userData={userData} 
+              removeLink={removeLink} 
+              toggleDrawer={toggleDrawer} 
+              state={state}/>
           }   
         </div>
 
-        { !matches && <PreviewDrawer 
-                        userData={userData} 
-                        removeLink={removeLink} 
-                        toggleDrawer={toggleDrawer} 
-                        state={state}/>}
+        {/* { !matches && } */}
     </div>
   );
 }

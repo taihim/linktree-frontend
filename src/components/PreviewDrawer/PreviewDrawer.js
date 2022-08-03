@@ -20,13 +20,17 @@ export default function PreviewDrawer(props) {
                 <Global
                     styles={{
                         '.MuiDrawer-root > .MuiPaper-root': {
-                            "background-color": "#d4cfcb"
-                        },
+                            'backgroundColor': '#d4cfcb',
+                            'justifyContent': 'center',
+                            // 'border': '10px solid black',
+                            'display': 'flex',
+                            'alignItems': 'center',
+                            'height': 'auto'
+                        }
                     }}
                 />
                 
                 <Drawer
-                    sx={{height: '100%'}}
                     anchor='bottom'
                     open={props.state['bottom']}
                     onClose={props.toggleDrawer('bottom', false)}

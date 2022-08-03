@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Profile from  "./routes/profile"
 import DraggableList from './routes/draggablelist'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,3 +22,5 @@ root.render(
     </Routes>
   </BrowserRouter>
 );
+
+serviceWorkerRegistration.register();
