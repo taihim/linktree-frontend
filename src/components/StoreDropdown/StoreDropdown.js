@@ -6,13 +6,13 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 export default function StoreDropdown(props) {
     
     const [toggle, setToggle] = React.useState(false)
-    const [dropdownClass, setDropdownClass] = React.useState('dropdown-content')
+    // const [dropdownClass, setDropdownClass] = React.useState('dropdown-content')
 
     function toggleDropdown(){
         setToggle((prevToggle)=>!prevToggle)
     }
     
-    let divClass = 'dropdown-content'
+    // let divClass = 'dropdown-content'
 
     return (
         <div>
